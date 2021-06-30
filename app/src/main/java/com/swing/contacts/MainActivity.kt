@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
         if (result == PackageManager.PERMISSION_DENIED) {
             checkPermissions()
         } else {
-            //Log.e("TAG", "loading : ")
             recyclerViewMainActivity.visibility = View.GONE
             progressBar.visibility = View.VISIBLE
             job = CoroutineScope(Dispatchers.IO).launch {
